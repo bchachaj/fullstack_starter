@@ -6,14 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-node src/server.js",
-    "dev": "nodemon ./src/server.js --exec babel-node",
+    "dev": "NODE_ENV=development nodemon ./src/server.js --exec babel-node",
     "lint": "eslint src/ --quiet",
     "build": "babel ./src/ -d build"
   },
   "keywords": [
     "node",
-    "react",
-    "graphql"
+    "graphql",
+    "react"
   ],
   "author": "Ben Chachaj",
   "license": "MIT",
@@ -21,7 +21,6 @@
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
     "@babel/node": "^7.6.1",
-    "babel-preset-env": "^1.7.0",
     "eslint": "^6.4.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
@@ -29,6 +28,15 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-standard": "^4.0.1",
+    "morgan": "^1.9.1",
     "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.7",
+    "helmet": "^3.21.1"
   }
 }
